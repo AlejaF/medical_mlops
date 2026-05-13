@@ -77,4 +77,6 @@ Invoke-RestMethod `
 ```
 
 ##Respuesta esperada
+```text
 estado: ENFERMEDAD AGUDA
+```
