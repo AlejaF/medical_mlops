@@ -26,48 +26,48 @@ predecir_estado/
 └── README.md
 ```
 ---
-##Instrucciones
+## Instrucciones
 
-##Requisitos
-Docker Desktop instalado
-Docker funcionando correctamente
+## Requisitos
+-Docker Desktop instalado
+-Docker funcionando correctamente
 
-##Para verificar la instalación:
+## Para verificar la instalación:
 docker --version
 
-##Construcción de la imagen Docker
+## Construcción de la imagen Docker
 
-##Descargar la carpeta predecir_estado
+## Descargar la carpeta predecir_estado
 
-##Ubicarse en la carpeta del proyecto:
+## Ubicarse en la carpeta del proyecto:
 cd predecir_estado
 
-##Construir la imagen:
+## Construir la imagen:
 ```bash
 docker build -t predecir_estado .
 ```
 
-##Verificar imagen creada:
+## Verificar imagen creada:
 ```bash
 docker images
 ```
 
-##Ejecutar el contenedor
+## Ejecutar el contenedor
 ```bash
 docker run -p 5000:5000 predecir_estado
 ```
 
-##Si la ejecución fue exitosa aparecerá:
+## Si la ejecución fue exitosa aparecerá:
 ```text
 Running on http://127.0.0.1:5000
 ```
 
-##Endpoint disponible
+## Endpoint disponible
 ```text
 POST http://localhost:5000/predecir
 ```
 
-##Ejemplo de solicitud desde PowerShell
+## Ejemplo de solicitud desde PowerShell
 ```powershell
 Invoke-RestMethod `
 -Uri "http://localhost:5000/predecir" `
@@ -76,7 +76,7 @@ Invoke-RestMethod `
 -Body '{"temperatura":39,"frecuencia_cardiaca":110,"nivel_dolor":8}'
 ```
 
-##Respuesta esperada
+## Respuesta esperada
 ```text
 estado: ENFERMEDAD AGUDA
 ```
