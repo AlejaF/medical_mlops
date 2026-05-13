@@ -29,20 +29,21 @@ predecir_estado/
 ## Instrucciones
 
 ## Requisitos
+
 -Docker Desktop instalado
 -Docker funcionando correctamente
 
 ### Para verificar la instalación:
 docker --version
 
-### Construcción de la imagen Docker
+## Construcción de la imagen Docker
 
 ### Descargar la carpeta predecir_estado
 
 ### Ubicarse en la carpeta del proyecto:
 cd predecir_estado
 
-## Construir la imagen:
+### Construir la imagen:
 ```bash
 docker build -t predecir_estado .
 ```
@@ -62,7 +63,7 @@ docker run -p 5000:5000 predecir_estado
 Running on http://127.0.0.1:5000
 ```
 
-### Endpoint disponible
+## Endpoint disponible
 ```text
 POST http://localhost:5000/predecir
 ```
