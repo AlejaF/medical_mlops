@@ -30,15 +30,15 @@ predecir_estado/
 
 ## Requisitos
 
--Docker Desktop instalado
--Docker funcionando correctamente
+- Docker Desktop instalado
+- Docker funcionando correctamente
 
 ### Para verificar la instalación:
 docker --version
 
 ## Construcción de la imagen Docker
 
-### Descargar la carpeta predecir_estado
+Descargar la carpeta predecir_estado
 
 ### Ubicarse en la carpeta del proyecto:
 cd predecir_estado
