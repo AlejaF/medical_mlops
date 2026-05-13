@@ -26,7 +26,6 @@ predecir_estado/
 └── README.md
 ```
 ---
-## Instrucciones
 
 ## Requisitos
 
