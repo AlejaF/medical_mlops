@@ -30,45 +30,67 @@ predecir_estado/
 
 ## Requisitos
 
-- Docker Desktop instalado
-- Docker funcionando correctamente
+- Docker Desktop instalado y funcionando correctamente
 
-### Para verificar la instalación:
+### Verificar la instalación:
 docker --version
 
-## Construcción de la imagen Docker
+## Construcción y ejecución
 
-Descargar la carpeta predecir_estado
+### 1. Descargar o clonar el proyecto
 
-### Ubicarse en la carpeta del proyecto:
+```bash
+git clone <URL_REPOSITORIO>
+```
+
+o descargar la carpeta:
+
+```text
+predecir_estado
+```
+
+### 2. Entrar a la carpeta
+
+```bash
 cd predecir_estado
+```
 
-### Construir la imagen:
+### 3. Construir imagen Docker
+
 ```bash
 docker build -t predecir_estado .
 ```
 
-### Verificar imagen creada:
+Verificar imagen:
+
 ```bash
 docker images
 ```
 
-### Ejecutar el contenedor
+### 4. Ejecutar contenedor
+
 ```bash
 docker run -p 5000:5000 predecir_estado
 ```
 
-### Si la ejecución fue exitosa aparecerá:
+Si todo funciona correctamente:
+
 ```text
 Running on http://127.0.0.1:5000
 ```
 
+---
+
 ## Endpoint disponible
+
 ```text
 POST http://localhost:5000/predecir
 ```
 
-### Ejemplo de solicitud desde PowerShell
+---
+
+## Ejemplo de solicitud
+
 ```powershell
 Invoke-RestMethod `
 -Uri "http://localhost:5000/predecir" `
@@ -77,7 +99,24 @@ Invoke-RestMethod `
 -Body '{"temperatura":39,"frecuencia_cardiaca":110,"nivel_dolor":8}'
 ```
 
-### Respuesta esperada
+---
+
+## Respuesta esperada
+
 ```text
-estado: ENFERMEDAD AGUDA
+estado
+-------
+ENFERMEDAD AGUDA
 ```
+
+---
+
+## Variables de entrada
+
+| Variable | Tipo |
+|-----------|------|
+| temperatura | float |
+| frecuencia_cardiaca | int |
+| nivel_dolor | int |
+
+---
