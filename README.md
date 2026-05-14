@@ -39,7 +39,7 @@ docker --version
 ### 1. Descargar o clonar el proyecto
 
 ```bash
-git clone <URL_REPOSITORIO>
+git clone <https://github.com/AlejaF/medical_mlops.git>
 ```
 
 o descargar la carpeta:
